@@ -5,6 +5,9 @@
 body{
   margin: 0%;
   background-color:black;
+  font-family: 'Koulen', cursive;
+  font-size: 2rem;
+  color: rgba(212, 14, 14, 0.599);
   
 }
 
@@ -25,13 +28,18 @@ body{
   color: #DBD3C9;
   width: 200px;
   height: 50px;
+  font-family: 'Koulen', cursive;
+  font-size: 1.5rem;
 }
 .btn:hover{
+  font-family: 'Koulen', cursive;
+  color: rgba(212, 14, 14, 0.599);
   background-color: #3A3335;
 }
 #makeup{
   background-image: url(assets/makeup.jpg);
   background-size: relative;
+  background-position: bottom ;
   width: 25%;
   height: 800px;
 }
@@ -41,13 +49,16 @@ body{
   background-size: cover;
   width: 25%;
   height: 800px;
+  display: flex;
+  align-items: flex-end;
 }
 #accessories{
   background-image: url(assets/accessories.jpg);
   background-size: 850px 800px;
-
   width: 25%;
   height: 800px;
+  display: flex;
+  align-items: flex-end;
 }
 #underrated{
   width: 25%;
@@ -57,6 +68,11 @@ body{
   display: flex block;
   flex-direction: row;
   flex-wrap: none;
-  justify-content: center;
+  justify-content:space-evenly;
+  
 
+}
+h2{
+  transform: rotate(-0.25turn);
+  float: left;
 }
