@@ -12,7 +12,6 @@ body{
 }
 
 #moth{
-  border-radius: 50%;
   max-width: 7%;
   max-height: 7%;
 }
@@ -34,7 +33,7 @@ body{
 .btn:hover{
   font-family: 'Koulen', cursive;
   color: rgba(212, 14, 14, 0.599);
-  background-color: #3A3335;
+  background-color: #DBD3C9;
 }
 #makeup{
   background-image: url(assets/makeup.jpg);
@@ -61,6 +60,8 @@ body{
   align-items: flex-end;
 }
 #underrated{
+  background-image: url(assets/unrtd.jpg);
+  background-size:cover;
   width: 25%;
   height: 800px;
 }
