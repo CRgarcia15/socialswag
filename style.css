@@ -44,7 +44,8 @@ body{
 }
 #accessories{
   background-image: url(assets/accessories.jpg);
-  background-size: cover;
+  background-size: 850px 800px;
+
   width: 25%;
   height: 800px;
 }
