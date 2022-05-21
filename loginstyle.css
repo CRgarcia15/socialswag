@@ -24,3 +24,24 @@ body{
 .formButton{
     font: 500 1 rem 'Quicksand', sans-serif;
 }
+/* The following code will eliminate the deadspace within the form box. It will bring things closer together from top and bottom.
+The frist child is the H1 login tag and the last child is the create account P tag*/
+.form > *:first-child{
+    margin-top: 0; /* The astrix is including all first-childs (first in line) from parent form*/
+}
+
+.form > *:last-child{
+    margin-bottom: 0;/* All last-childs (last in line) from parent form*/
+}
+.formMessage{
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+.formMessageSuccess{
+    color: var(--color-success); /* As defined in the body it makes consistency and coding much easier with exact matches and tab completion*/
+}
+
+.formMessageError{
+    color: var(--color-error);
+}
