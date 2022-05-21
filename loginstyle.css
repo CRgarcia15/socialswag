@@ -94,7 +94,7 @@ The frist child is the H1 login tag and the last child is the create account P t
     background: pink;
 }
 .formButton:active{
-    transform: scale(0.98);
+    transform: scale(0.98); /* will make it scalable in ratio from 0-1 */
 }
 .formText{
     text-align: center;

@@ -10,7 +10,7 @@
   <script src="script.js"></script>
   <body>
     <div class="container">
-      <form class="form" id="login">
+      <form class="form formHidden" id="login">
         <h1 class="formTitle">Login</h1>
         <div class="formMessage formMessageError"></div>
         <div class="formInputGroup">
@@ -38,6 +38,53 @@
         <p class="formText">
           <a class="formLink" href="./" id="linkCreateAccount"
             >Don't have an account? Create account</a
+          >
+        </p>
+      </form>
+      <form class="form" id="createAccount">
+        <h1 class="formTitle">Create Account</h1>
+        <div class="formMessage formMessageError"></div>
+        <div class="formInputGroup">
+          <input
+            type="text"
+            class="formInput"
+            autofocus
+            placeholder="Username"
+          />
+          <div class="formInputErrorMessage"></div>
+        </div>
+        <div class="formInputGroup">
+          <input
+            type="text"
+            class="formInput"
+            autofocus
+            placeholder="Email Address"
+          />
+          <div class="formInputErrorMessage"></div>
+        </div>
+        <div class="formInputGroup">
+          <input
+            type="password"
+            class="formInput"
+            autofocus
+            placeholder="Password"
+          />
+          <div class="formInputErrorMessage"></div>
+        </div>
+        <div class="formInputGroup">
+          <input
+            type="password"
+            class="formInput"
+            autofocus
+            placeholder="Confirm Password"
+          />
+          <div class="formInputErrorMessage"></div>
+        </div>
+        <button class="formButton" type="submit">Continue</button>
+
+        <p class="formText">
+          <a class="formLink" href="./" id="linkLogin"
+            >Already have an account? Sign in</a
           >
         </p>
       </form>
