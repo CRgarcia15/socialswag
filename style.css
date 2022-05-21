@@ -13,6 +13,8 @@ body{
 h2{
   scale: .8;
   translate: -50px 0;
+  transform: rotate(-0.25turn);
+  float: left;
 }
 
 
@@ -77,9 +79,11 @@ h2{
   flex-wrap: none;
   justify-content:space-evenly;
   
-
 }
-h2{
-  transform: rotate(-0.25turn);
-  float: left;
-}
+ a,
+ a:hover,
+ a:focus,
+ a:active {
+   text-decoration: none;
+   color: inherit;
+ }
