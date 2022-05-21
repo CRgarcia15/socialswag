@@ -10,6 +10,11 @@ body{
   color: rgba(212, 14, 14, 0.599);
   
 }
+h2{
+  scale: .8;
+  translate: -50px 0;
+}
+
 
 #moth{
   max-width: 7%;
@@ -32,7 +37,7 @@ body{
 }
 .btn:hover{
   font-family: 'Koulen', cursive;
-  color: rgba(212, 14, 14, 0.599);
+  color:black;
   background-color: #DBD3C9;
 }
 #makeup{
@@ -64,6 +69,7 @@ body{
   background-size:cover;
   width: 25%;
   height: 800px;
+
 }
 .container{
   display: flex block;
