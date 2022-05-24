@@ -1,4 +1,5 @@
 /* Once the document is ready to be worked with we can run a function and get a reference to both Login and Sign Up forms*/
+/*Always start with this to make sure the DOM (document) is loaded to run things on the page*/
 document.addEventListener("DOMContentLoaded", () =>{
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");

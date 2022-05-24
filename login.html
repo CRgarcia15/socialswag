@@ -7,7 +7,54 @@
     <title>Login / SignUp Form</title>
     <link rel="stylesheet" href="loginstyle.css" />
   </head>
-  <script src="script.js"></script>
+  <script>
+    /* Once the document is ready to be worked with we can run a function and get a reference to both Login and Sign Up forms*/
+    /*Always start with this to make sure the DOM (document) is loaded to run things on the page*/
+    /* console.dir(document); will show the entire DOM tree*/
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginForm = document.querySelector("#login");
+      const createAccountForm = document.querySelector("#createAccount");
+
+      /* When clicked on the create account it will hide the login for and remove the formHidden from the createAccountForm */
+      document
+        .querySelector("#linkCreateAccount")
+        .addEventListener("click", (e) => {
+          /* e will pass a reference in place of () in the Event */
+          e.preventDefault(); /* This will prevent the html from redirecting and loading webpages from the href*/
+          loginForm.classList.add("formHidden");
+          createAccountForm.classList.remove("formHidden");
+        });
+
+      /* Same code as above but the other way around so when the Login form is cliked the createAccountForm is hidden */
+      document.querySelector("#linkLogin").addEventListener("click", (e) => {
+        /* e will pass a reference in place of () in the Event*/
+        e.preventDefault();
+        loginForm.classList.remove("formHidden");
+        createAccountForm.classList.add("formHidden");
+      });
+      //create a empty array for login credential
+      let allAccounts = [];
+      const create = (ev) => {
+        //using first class citizens for instantiating logged and passing the event with a function
+        ev.preventDefault(); //prevents from sending off data and refreshing the page.
+        let data = {
+          //get values from the input form by their ID and assigns them to a variable
+          name: document.getElementById("username").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password"),
+        };
+        //I push or add the array of variables into the array of allAccounts
+        allAccounts.push(data);
+        console.log(allAccounts); //console log to show it took in the values
+        //this will reset the page bact to an empty form
+        //localStorage.setItem("Accounts", JSON.stringify(allAccounts));
+        document.getElementById("createAccount").reset();
+      };
+      document
+        .getElementById("newAccountBtn")
+        .addEventListener("click", create);
+    });
+  </script>
   <body>
     <div class="container">
       <form class="form" id="login">
@@ -16,19 +63,23 @@
           <input
             type="text"
             class="formInput"
+            id="member"
             autofocus
             placeholder="Username or email"
+            value=""
           />
         </div>
         <div class="formInputGroup">
           <input
             type="password"
             class="formInput"
+            id="memberPsw"
             autofocus
             placeholder="Password"
+            value=""
           />
         </div>
-        <button class="formButton" type="submit">Continue</button>
+        <button class="formButton" id="loginBtn" type="submit">Continue</button>
         <p class="formText">
           <a href="#" class="formLink">Forgot your password?</a>
         </p>
@@ -44,16 +95,20 @@
           <input
             type="text"
             class="formInput"
+            id="username"
             autofocus
             placeholder="Username"
+            value=""
           />
         </div>
         <div class="formInputGroup">
           <input
             type="text"
             class="formInput"
+            id="email"
             autofocus
             placeholder="Email Address"
+            value=""
           />
         </div>
         <div class="formInputGroup">
@@ -68,11 +123,15 @@
           <input
             type="password"
             class="formInput"
+            id="password"
             autofocus
             placeholder="Confirm Password"
+            value=""
           />
         </div>
-        <button class="formButton" type="submit">Continue</button>
+        <button class="formButton" id="newAccountBtn" type="submit">
+          Continue
+        </button>
 
         <p class="formText">
           <a class="formLink" href="./" id="linkLogin"
