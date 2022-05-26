@@ -1,21 +1,30 @@
-var counter = 0, // Try change this what ever you want
-  votePlus = counter + 1,
-  voteMinus = counter - 1;
+//Span for displaying the number of likes and dislikes
+let countUp = document.getElementById('upCount');
+let countDown = document.getElementById('downCount');
 
-function checkIfUserVoted() {
-  return localStorage.getItem("voted");
+//Buttons for like and dislike
+let upBtn = document.getElementById('voteUp');
+let downBtn = document.getElementById('voteDown')
+
+//Counter initializers
+let countU = 0
+let countD = 0
+
+//Display initial like and dislike amounts
+countUp.innerHTML = countU
+countDown.innerHTML = countD
+
+//Functions for when button is clicked
+const voteUp = () => {
+    countU++;
+    countUp.innerHTML = countU;
 }
-if (!localStorage.getItem("voted")) {
-  localStorage.setItem("voted", counter);
-  $("#count").text(counter);
+
+const voteDown = () => {
+    countD++;
+    countDown.innerHTML = countD;
 }
-$(".buttonup").click(function () {
-  var vote = checkIfUserVoted() != votePlus ? votePlus : counter;
-  localStorage.setItem("voted", vote);
-  $(this).next().text(vote);
-});
-$(".buttondw").on("click", function () {
-  var vote = checkIfUserVoted() != voteMinus ? voteMinus : counter;
-  localStorage.setItem("voted", vote);
-  $(this).prev().text(vote);
-});
+
+//Displays the amount of likes and dislikes after button has been clicked
+upBtn.document.addEventListener("click", voteUp)
+downBtn.document.addEventListener("click", voteDown)
